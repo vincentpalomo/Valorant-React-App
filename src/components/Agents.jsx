@@ -32,6 +32,8 @@ const Agents = () => {
                     {agent.displayName}
                   </h2>
                   <p>{agent.description}</p>
+                  <p>Role: {agent.role.displayName}</p>
+                  <p>Abilities: </p>
                   <div>
                     {agent.abilities.map((ability, i) => {
                       return (
