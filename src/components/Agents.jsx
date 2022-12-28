@@ -31,7 +31,7 @@ const Agents = () => {
                   <h2 className='card-title font-sans text-4xl'>
                     {agent.displayName}
                   </h2>
-                  <p>{agent.description}</p>
+                  <p>Bio: {agent.description}</p>
                   <p>Role: {agent.role.displayName}</p>
                   <p>Abilities: </p>
                   <div>
