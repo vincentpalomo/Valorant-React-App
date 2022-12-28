@@ -43,12 +43,17 @@ const Hero = () => {
               tactical shooters, borrowing several mechanics such as the buy
               menu, spray patterns, and inaccuracy while moving.
             </p>
-            <Link to={'/agents'} className='btn btn-primary'>
-              View Agents
-            </Link>
-            <Link to={'/weapons'} className='btn btn-primary'>
-              View Weapons
-            </Link>
+            <div>
+              <Link to={'/agents'} className='btn btn-primary mx-3'>
+                View Agents
+              </Link>
+              <Link to={'/weapons'} className='btn btn-primary mx-3'>
+                View Weapons
+              </Link>
+              <Link to={'/maps'} className='btn btn-primary mx-3'>
+                View Maps
+              </Link>
+            </div>
           </div>
         </div>
       </div>
