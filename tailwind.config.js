@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        valorant: ['valorant', 'sans-serif'],
+      },
+    },
   },
   plugins: [require('daisyui')],
 };
