@@ -32,7 +32,7 @@ const Hero = () => {
         <div className='hero-content flex-col lg:flex-row'>
           <img src={card.largeArt} className='max-w-sm rounded-lg shadow-2xl' />
           <div>
-            <h1 className='text-5xl font-bold'>Valorant</h1>
+            <h1 className='text-6xl text-red-400 font-valorant'>Valorant</h1>
             <p className='py-6'>
               Valorant is a free-to-play first-person tactical hero shooter
               developed and published by Riot Games, for Windows. Teased under
@@ -44,13 +44,19 @@ const Hero = () => {
               menu, spray patterns, and inaccuracy while moving.
             </p>
             <div>
-              <Link to={'/agents'} className='btn btn-primary mx-3'>
+              <Link
+                to={'/agents'}
+                className='btn btn-primary mx-3 font-valorant'
+              >
                 View Agents
               </Link>
-              <Link to={'/weapons'} className='btn btn-primary mx-3'>
+              <Link
+                to={'/weapons'}
+                className='btn btn-primary mx-3 font-valorant'
+              >
                 View Weapons
               </Link>
-              <Link to={'/maps'} className='btn btn-primary mx-3'>
+              <Link to={'/maps'} className='btn btn-primary mx-3 font-valorant'>
                 View Maps
               </Link>
             </div>

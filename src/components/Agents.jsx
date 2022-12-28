@@ -28,7 +28,9 @@ const Agents = () => {
                   <img src={agent.bustPortrait} alt='Agents' />
                 </figure>
                 <div className='card-body'>
-                  <h2 className='card-title'>{agent.displayName}</h2>
+                  <h2 className='card-title font-sans text-4xl'>
+                    {agent.displayName}
+                  </h2>
                   <p>{agent.description}</p>
                   <div>
                     {agent.abilities.map((ability, i) => {
