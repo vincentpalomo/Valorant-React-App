@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         valorant: ['valorant', 'sans-serif'],
+        Mohave: ['Mohave', 'sans-serif']
       },
     },
   },
