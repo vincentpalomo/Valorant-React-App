@@ -18,15 +18,15 @@ const Weapons = () => {
   }, []);
 
   return (
-    <div className='hero min-h-screen mb-3 my-3'>
-      <div className='grid grid-cols-3 gap-3'>
+    <div className="hero min-h-screen mb-3 my-3">
+      <div className="grid gap-5 sm:grid-cols-3 sm:gap-10">
         {weapons.map((weapon) => {
           return (
-            <div className='card w-96 bg-base-100 shadow-xl' key={weapon.uuid}>
-              <div className='card-body'>
-                <h2 className='card-title'>{weapon.displayName}</h2>
+            <div className="card w-96 bg-base-100 shadow-xl" key={weapon.uuid}>
+              <div className="card-body">
+                <h2 className="card-title">{weapon.displayName}</h2>
                 {weapon.shopData !== null && (
-                  <section className='p-3'>
+                  <section className="p-3">
                     <p>{weapon.shopData.category}</p>
                     <p>Cost: {weapon.shopData.cost}</p>
                     <p>Fire Rate: {weapon.weaponStats.fireRate} Rounds/sec</p>
@@ -35,7 +35,7 @@ const Weapons = () => {
                   </section>
                 )}
               </div>
-              <figure className='p-3'>
+              <figure className="p-3">
                 <img src={weapon.displayIcon} alt={weapon.displayName} />
               </figure>
             </div>
