@@ -18,19 +18,17 @@ const Agents = () => {
     }
   };
   return (
-    <div className='grid grid-row-3 gap-3 justify-center items-center my-3'>
+    <div className="grid sm:grid-row-3 gap-5 justify-center items-center my-3">
       {agents.map((agent) => {
         return (
-          <div className='max-w-5xl' key={agent.uuid}>
+          <div className="max-w-5xl" key={agent.uuid}>
             {agent.isPlayableCharacter && (
-              <div className='card card-side bg-base-100 shadow-xl'>
+              <div className="card card-side bg-base-100 shadow-xl">
                 <figure>
-                  <img src={agent.bustPortrait} alt='Agents' />
+                  <img className="h-[40rem] sm:h-[50rem] sm:w-[125rem]" src={agent.bustPortrait} alt="Agents" />
                 </figure>
-                <div className='card-body'>
-                  <h2 className='card-title font-sans text-4xl'>
-                    {agent.displayName}
-                  </h2>
+                <div className="card-body">
+                  <h2 className="card-title font-sans text-4xl">{agent.displayName}</h2>
                   <p>Bio: {agent.description}</p>
                   <p>Role: {agent.role.displayName}</p>
                   <p>Abilities: </p>
@@ -38,12 +36,8 @@ const Agents = () => {
                     {agent.abilities.map((ability, i) => {
                       return (
                         <div key={i}>
-                          <span className='flex flex-row justify-center items-center gap-3'>
-                            <img
-                              src={ability.displayIcon}
-                              alt={ability.displayName}
-                              className='h-20 w-20'
-                            />
+                          <span className="flex flex-row justify-center items-center gap-3">
+                            <img src={ability.displayIcon} alt={ability.displayName} className="h-20 w-20" />
                             <p>{ability.displayName}</p>
                           </span>
                         </div>
