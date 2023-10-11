@@ -6,3 +6,10 @@
   font-family: 'valorant';
   src: url(./fonts/Valorant.ttf);
 }
+
+html,
+body {
+  background: #171717;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
