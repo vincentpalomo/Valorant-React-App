@@ -22,41 +22,32 @@ const Hero = () => {
   }, []);
   return (
     <div
-      className='hero'
+      className="hero"
       style={{
         backgroundImage: `url("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blta73c882a72c618e3/5ed4150d08ac190a51c6ab88/VALORANT_Logo_V_Lightbox.jpg")`,
       }}
     >
-      <div className='hero-overlay bg-opacity-60'></div>
-      <div className='hero-content text-center text-neutral-content'>
-        <div className='hero-content flex-col lg:flex-row'>
-          <img src={card.largeArt} className='max-w-sm rounded-lg shadow-2xl' />
+      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-content text-center text-neutral-content">
+        <div className="hero-content flex-col lg:flex-row">
+          <img src={card.largeArt} className="max-w-sm rounded-lg shadow-2xl hidden sm:block" />
           <div>
-            <h1 className='text-6xl text-red-400 font-valorant'>Valorant</h1>
-            <p className='py-6'>
-              Valorant is a free-to-play first-person tactical hero shooter
-              developed and published by Riot Games, for Windows. Teased under
-              the codename Project A in October 2019, the game began a closed
-              beta period with limited access on April 7, 2020, followed by a
-              release on June 2, 2020. The development of the game started in
-              2014. Valorant takes inspiration from the Counter-Strike series of
-              tactical shooters, borrowing several mechanics such as the buy
-              menu, spray patterns, and inaccuracy while moving.
+            <h1 className="text-6xl text-red-400 font-valorant">Valorant</h1>
+            <p className="py-6">
+              Valorant is a free-to-play first-person tactical hero shooter developed and published by Riot Games, for
+              Windows. Teased under the codename Project A in October 2019, the game began a closed beta period with
+              limited access on April 7, 2020, followed by a release on June 2, 2020. The development of the game
+              started in 2014. Valorant takes inspiration from the Counter-Strike series of tactical shooters, borrowing
+              several mechanics such as the buy menu, spray patterns, and inaccuracy while moving.
             </p>
-            <div>
-              <Link
-                to={'/agents'}
-                className='btn btn-primary mx-3 font-valorant'
-              >
+            <div className="space-y-5">
+              <Link to={'/agents'} className="btn btn-primary mx-3 font-valorant">
                 View Agents
               </Link>
-              <Link
-                to={'/weapons'}
-                className='btn btn-primary mx-3 font-valorant'
-              >
+              <Link to={'/weapons'} className="btn btn-primary mx-3 font-valorant">
                 View Weapons
               </Link>
-              <Link to={'/maps'} className='btn btn-primary mx-3 font-valorant'>
+              <Link to={'/maps'} className="btn btn-primary mx-3 font-valorant">
                 View Maps
               </Link>
             </div>
