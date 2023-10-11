@@ -8,6 +8,13 @@ export const fetchAgents = async () => {
   return json;
 };
 
+// fetch agent by uuid
+export const fetchAgentId = async (uuid) => {
+  const res = await fetch(`${APIURL}/agents/${uuid}`);
+  const json = await res.json();
+  return json;
+};
+
 // fetch cards
 export const fetchCards = async () => {
   const res = await fetch(`${APIURL}/playercards`);
