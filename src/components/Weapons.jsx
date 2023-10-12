@@ -18,26 +18,37 @@ const Weapons = () => {
   }, []);
 
   return (
-    <div className="hero min-h-screen mb-3 my-3">
-      <div className="grid gap-5 sm:grid-cols-3 sm:gap-10">
+    <div className="">
+      <div className="grid grid-cols-1 gap-5 sm:gap-0">
         {weapons.map((weapon) => {
           return (
-            <div className="card w-96 bg-base-100 shadow-xl" key={weapon.uuid}>
-              <div className="card-body">
-                <h2 className="card-title">{weapon.displayName}</h2>
+            <div className=" md:grid md:grid-cols-1 lg:flex lg:flex-row " key={weapon.uuid}>
+              <div className="flex flex-col justify-center items-center lg:w-3/4 lg:bg-base-200">
+                <h1 className="text-8xl lg:text-9xl font-Mohave font-black uppercase tracking-tighter text-slate-100">
+                  {weapon.displayName}
+                </h1>
                 {weapon.shopData !== null && (
-                  <section className="p-3">
-                    <p>{weapon.shopData.category}</p>
-                    <p>Cost: {weapon.shopData.cost}</p>
-                    <p>Fire Rate: {weapon.weaponStats.fireRate} Rounds/sec</p>
-                    <p>Reload Speed: {weapon.weaponStats.reloadTimeSeconds}s</p>
-                    <p>Magazine Size: {weapon.weaponStats.magazineSize}</p>
-                  </section>
+                  <div className="w-3/4">
+                    <p className="text-center text-2xl lg:text-5xl tracking-tighter font-Mohave uppercase text-slate-50">
+                      {weapon.shopData.category}
+                    </p>
+                    <p className="font-Mohave uppercase text-center lg:text-xl ">cost: {weapon.shopData.cost}</p>
+                    <p className="font-Mohave uppercase text-center lg:text-xl ">
+                      rounds/sec: {weapon.weaponStats.fireRate}
+                    </p>
+                    <p className="font-Mohave uppercase text-center lg:text-xl ">
+                      reload speed: {weapon.weaponStats.reloadTimeSeconds}
+                    </p>
+                    <p className="font-Mohave uppercase text-center lg:text-xl ">
+                      magazine size: {weapon.weaponStats.magazineSize}
+                    </p>
+                    <span className="hidden sm:block sm:border-b-2"></span>
+                  </div>
                 )}
               </div>
-              <figure className="p-3">
-                <img src={weapon.displayIcon} alt={weapon.displayName} />
-              </figure>
+              <div className="flex flex-col justify-center items-center ">
+                <img className="scale-100" src={weapon.displayIcon} alt={weapon.displayName} />
+              </div>
             </div>
           );
         })}
