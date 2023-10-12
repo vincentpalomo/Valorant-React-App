@@ -25,7 +25,7 @@ const HeroUpdate = () => {
             <div key={agent.uuid}>
               {agent.isPlayableCharacter && (
                 <div className='flex flex-col items-center gap-2 sm:flex-row'>
-                  <div className='flex flex-col items-center sm:justify-center sm:gap-5 gap-1 sm:h-[50rem] sm:bg-base-100 sm:w-4/5'>
+                  <div className='flex flex-col items-center sm:justify-center sm:gap-5 gap-1 sm:h-[50rem] sm:bg-base-200 sm:w-4/5'>
                     <h1 className='text-8xl sm:text-[14rem] sm:tracking-[-.045em] text-slate-100 font-Mohave font-bold tracking-tight uppercase'>
                       {agent.displayName}
                     </h1>
