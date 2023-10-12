@@ -5,3 +5,4 @@ export { default as Agents } from './Agents';
 export { default as Weapons } from './Weapons';
 export { default as Maps } from './Maps';
 export { default as HeroUpdate } from './HeroUpdate.jsx';
+export {default as WeaponsUpdate} from './WeaponsUpdate'

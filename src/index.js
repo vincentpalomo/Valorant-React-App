@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navigation, Hero, Footer, Agents, Weapons, Maps, HeroUpdate } from './components';
+import { Navigation, Hero, Footer, Agents, Weapons, Maps, HeroUpdate, WeaponsUpdate } from './components';
 import style from './global.css';
 
 const App = () => {
@@ -30,8 +30,8 @@ const App = () => {
             <Route path={'/maps'}>
               <Maps />
             </Route>
-            <Route path={'/hero'}>
-              <HeroUpdate />
+            <Route path={'/test'}>
+              <WeaponsUpdate />
             </Route>
           </Switch>
         </section>
