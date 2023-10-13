@@ -27,7 +27,11 @@ const Weapons = () => {
                 <h1 className='z-10 text-8xl sm:text-[10rem] md:text-[8rem] lg:text-[10rem] xl:text-[15rem] font-Mohave font-black uppercase tracking-tighter text-slate-100'>
                   {weapon.displayName}
                 </h1>
-                <img className='lg:absolute lg:top-48 lg:z-0 lg:scale-150 filter brightness-0' src={weapon.displayIcon} alt={weapon.displayName} />
+                <img
+                  className='hidden lg:block lg:absolute lg:top-48 lg:z-0 lg:scale-150 filter brightness-0'
+                  src={weapon.displayIcon}
+                  alt={weapon.displayName}
+                />
                 {weapon.shopData !== null && (
                   <div className='w-3/4 z-20'>
                     <p className='text-center text-2xl lg:text-8xl tracking-tighter font-Mohave uppercase text-slate-50'>
