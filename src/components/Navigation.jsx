@@ -11,7 +11,7 @@ const Navigation = () => {
       </div>
       <div className='flex-none'>
         <div className='dropdown dropdown-hover font-valorant'>
-          <label tabIndex={0} className='btn m-1'>
+          <label tabIndex={0} className='btn mx-5'>
             Game Info
           </label>
           <ul tabIndex={0} className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'>
