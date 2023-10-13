@@ -23,7 +23,7 @@ const Weapons = () => {
         {weapons.map((weapon) => {
           return (
             <div className=' md:grid md:grid-cols-1 lg:flex lg:flex-row lg:h-[50rem]' key={weapon.uuid}>
-              <div className='relative flex flex-col justify-center items-center lg:w-3/4 lg:bg-base-200 border-2'>
+              <div className='relative flex flex-col justify-center items-center lg:w-3/4 lg:bg-base-200'>
                 <h1 className='z-10 text-8xl sm:text-[10rem] md:text-[8rem] lg:text-[10rem] xl:text-[15rem] font-Mohave font-black uppercase tracking-tighter text-slate-100'>
                   {weapon.displayName}
                 </h1>
