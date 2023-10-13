@@ -10,7 +10,7 @@ const App = () => {
       <div
         className='flex flex-col justify-between h-screen'
         style={{
-          background: `url(https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltaf4dae47b30c2172/5fd2d140a84f233eaf61091a/VALORANT_Logo_V.jpg)`,
+          background: `url()`,
         }}
       >
         <header>

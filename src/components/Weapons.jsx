@@ -18,7 +18,7 @@ const Weapons = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="mt-10 sm:mt-0">
       <div className="grid grid-cols-1 gap-5 sm:gap-0">
         {weapons.map((weapon) => {
           return (
