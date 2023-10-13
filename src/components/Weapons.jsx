@@ -24,7 +24,7 @@ const Weapons = () => {
           return (
             <div className=" md:grid md:grid-cols-1 lg:flex lg:flex-row lg:h-[50rem]" key={weapon.uuid}>
               <div className="flex flex-col justify-center items-center lg:w-3/4 lg:bg-base-200">
-                <h1 className="text-8xl sm:text-[10rem] md:text-[8rem] lg:text-[10rem] xl:text-[15rem] font-Mohave font-black uppercase tracking-tighter  text-slate-100">
+                <h1 className="text-8xl sm:text-[10rem] md:text-[8rem] lg:text-[10rem] xl:text-[15rem] font-Mohave font-black uppercase tracking-tighter text-slate-100">
                   {weapon.displayName}
                 </h1>
                 {weapon.shopData !== null && (
