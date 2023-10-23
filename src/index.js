@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navigation, Hero, Footer, Agents, Weapons, Maps, HeroUpdate, WeaponsUpdate } from './components';
-import style from './global.css';
+import { Navigation, Hero, Footer, Agents, Weapons, Maps, WeaponsUpdate } from './components';
+import './global.css';
 
 const App = () => {
   return (
