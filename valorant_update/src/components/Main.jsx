@@ -23,7 +23,7 @@ const Main = () => {
           Deathmatch and Spike Rush
         </p>
         <div className="flex justify-center">
-          <button className="h-[60px] w-[300px] bg-valorant-red rounded">learn the game</button>
+          <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white">learn the game</button>
         </div>
       </div>
     </>
