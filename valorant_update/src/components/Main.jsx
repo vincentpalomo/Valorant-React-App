@@ -12,8 +12,8 @@ const Main = () => {
         </div>
       </div>
       <div className="h-screen bg-neutral-200 flex flex-col justify-center gap-5">
-        <div className="text-[40px] leading-3 font-Playfair">we are</div>
-        <div className="text-8xl font-Mohave font-bold tracking-tighter uppercase">valorant</div>
+        <div className="text-[40px] leading-3 font-Playfair italic text-valorant-black">we are</div>
+        <div className="text-8xl font-Mohave font-bold tracking-tighter uppercase text-valorant-black">valorant</div>
 
         <div className="text-[23.04px]">defy the limits</div>
         <p className="text-[19.20px]">
