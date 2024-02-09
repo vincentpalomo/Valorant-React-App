@@ -84,6 +84,27 @@ const Main = () => {
           </button>
         </div>
       </div>
+
+      {/* footer */}
+      <div className="h-screen flex flex-col justify-center">
+        <img src={require('../images/mobile-valorant-title-red.png')} alt="logo" />
+
+        <div className="flex justify-center mt-10">
+          <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+            learn the game
+          </button>
+        </div>
+
+        <div>
+          <div>riot games</div>
+          <div>valorant logo</div>
+        </div>
+
+        <p>
+          © 2020-2024 Riot Games, Inc. RIOT GAMES, VALORANT and any associated logos are trademarks, service marks,
+          and/or registered trademarks of Riot Games, Inc.
+        </p>
+      </div>
     </>
   );
 };
