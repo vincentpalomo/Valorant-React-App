@@ -61,6 +61,29 @@ const Main = () => {
           </button>
         </div>
       </div>
+
+      {/* maps */}
+      <div className="h-screen bg-valorant-white flex flex-col justify-center gap-5">
+        <div>
+          <div>your</div>
+          <div>maps</div>
+        </div>
+
+        <div>
+          fight around <span>the</span> world
+        </div>
+
+        <p>
+          Each map is a playground to showcase your creative thinking. Purpose-built for team strategies, spectacular
+          plays, and clutch moments. Make the play others will imitate for years to come..
+        </p>
+
+        <div className="flex justify-center mt-10">
+          <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+            learn the game
+          </button>
+        </div>
+      </div>
     </>
   );
 };
