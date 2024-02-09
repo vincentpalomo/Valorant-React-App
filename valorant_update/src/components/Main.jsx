@@ -90,17 +90,17 @@ const Main = () => {
         <img src={require('../images/mobile-valorant-title-red.png')} alt="logo" />
 
         <div className="flex justify-center mt-10">
-          <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
-            learn the game
+          <button className="h-[60px] w-[350px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+            download game client
           </button>
         </div>
 
-        <div>
+        <div className="flex justify-around text-valorant-red">
           <div>riot games</div>
           <div>valorant logo</div>
         </div>
 
-        <p>
+        <p className="text-xs text-center text-off-white ">
           © 2020-2024 Riot Games, Inc. RIOT GAMES, VALORANT and any associated logos are trademarks, service marks,
           and/or registered trademarks of Riot Games, Inc.
         </p>
