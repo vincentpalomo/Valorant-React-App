@@ -1,11 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="h-[100px] w-screen flex justify-between items-center px-10 bg-off-black">
-      <div className=" font-Mohave text-neutral-200">logo</div>
-      <div className="text-neutral-200">menu</div>
-    </div>
+    <>
+      {/* mobile */}
+      <div className='h-[100px] w-screen flex justify-between items-center px-10 bg-off-black'>
+        {/* logo */}
+        <button className=' font-Mohave text-neutral-200'>
+          <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='50' height='50' viewBox='0 0 48 48'>
+            <path
+              fill='#ff5252'
+              d='M5,10.885v11.761c0,0.878,0.289,1.732,0.823,2.43L17.4,40.215C17.778,40.71,18.365,41,18.988,41	h9.951c0.835,0,1.302-0.963,0.785-1.619L6.785,10.266C6.198,9.521,5,9.936,5,10.885z'
+            ></path>
+            <path
+              fill='#ff5252'
+              d='M27.245,28.389l13.964-18.07C41.792,9.563,43,9.976,43,10.93v12.465c0,0.395-0.117,0.781-0.336,1.109	l-3.07,4.606C39.223,29.666,38.598,30,37.93,30h-9.893C27.206,30,26.737,29.046,27.245,28.389z'
+            ></path>
+          </svg>
+        </button>
+        {/* menu */}
+        <button className='text-neutral-200' onClick={toggleMenu}>
+          <svg width='31' height='30' viewBox='0 0 31 30' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M3.86768 22.5V20H26.3677V22.5H3.86768ZM3.86768 16.25V13.75H26.3677V16.25H3.86768ZM3.86768 10V7.5H26.3677V10H3.86768Z'
+              fill='#ECE8E1'
+            />
+          </svg>
+        </button>
+
+        {/* nav menu open */}
+        {isOpen && (
+          <div className='fixed inset-0 z-50 bg-off-black overflow-hidden'>
+            <div className='relative top-10 right-0'>
+              <button onClick={toggleMenu}>
+                <svg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path
+                    d='M8 23.75L6.25 22L13.25 15L6.25 8L8 6.25L15 13.25L22 6.25L23.75 8L16.75 15L23.75 22L22 23.75L15 16.75L8 23.75Z'
+                    fill='#ECE8E1'
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
