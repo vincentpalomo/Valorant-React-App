@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage: {
         'main-omen': "url('/src/images/omen-main.jpg')",
+        'map-section': "url('https://media.valorant-api.com/maps/d960549e-485c-e861-8d71-aa9d1aed12a2/splash.png')",
       },
     },
   },

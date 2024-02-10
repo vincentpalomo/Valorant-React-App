@@ -61,21 +61,24 @@ const Main = () => {
 
       {/* maps */}
       <div className='h-screen bg-valorant-white flex flex-col justify-center gap-5'>
-        <div className='mb-16'>
+        {/* background image */}
+        <div className='h-screen w-screen bg-map-section absolute opacity-50 bg-[center_top_-125px]'></div>
+
+        <div className='mb-16 z-0'>
           <div className='font-Playfair italic text-[40px] mx-5'>your</div>
           <div className='font-Mohave font-bold uppercase tracking-tighter leading-[68px] text-8xl mx-5'>maps</div>
         </div>
 
-        <div className='text-[23.04px] mx-6 tracking-wide uppercase font-bold'>
+        <div className='text-[23.04px] mx-6 tracking-wide uppercase font-bold z-0'>
           fight around <span className='font-Playfair lowercase italic font-thin text-xl -mx-1'>the</span> world
         </div>
 
-        <p className='text-[19.20px] text-valorant-black tracking-wider leading-tight mx-6 mb-36'>
+        <p className='text-[19.20px] text-valorant-black tracking-wider leading-tight mx-6 mb-36 z-0'>
           Each map is a playground to showcase your creative thinking. Purpose-built for team strategies, spectacular plays, and clutch moments. Make
           the play others will imitate for years to come..
         </p>
 
-        <div className='flex justify-center'>
+        <div className='flex justify-center z-0'>
           <button className='h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase'>view all maps</button>
         </div>
       </div>
