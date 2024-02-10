@@ -7,12 +7,19 @@ const Main = () => {
     <>
       {/* main */}
       <div className="flex flex-col justify-end items-center h-screen">
-        <div className="mb-[150px] flex flex-col items-center">
+        <div className="h-screen bg-main-omen bg-[length:1390px_782px] bg-[top_75px_right_-290px] w-screen absolute -z-10 brightness-50"></div>
+        <div className="mb-[125px] flex flex-col items-center">
           <img src={require('../images/mobile-valorant-logo.png')} alt="logo" />
           <p className="font-sans text-neutral-200 uppercase text-xs text-center w-[232px] my-3">
             A 5v5 character-based tactical shooter
           </p>
         </div>
+        {/* <img
+          className="absolute -z-10 h-screen w-auto overflow-x-auto"
+          src={require('../images/omen-main.jpg')}
+          alt="omen main"
+        /> */}
+        <div className=""></div>
       </div>
 
       {/* about */}

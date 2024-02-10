@@ -15,6 +15,9 @@ module.exports = {
         Mohave: ['Mohave', 'sans-serif'],
         Playfair: ['Playfair Display', 'sans-serif'],
       },
+      backgroundImage: {
+        'main-omen': "url('/src/images/omen-main.jpg')",
+      },
     },
   },
   plugins: [],
