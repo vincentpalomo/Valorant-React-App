@@ -14,6 +14,7 @@ const Main = () => {
           </p>
         </div>
       </div>
+
       {/* about */}
       <div className="h-screen bg-valorant-white flex flex-col justify-center gap-5">
         <div>
@@ -37,10 +38,11 @@ const Main = () => {
           </button>
         </div>
       </div>
+
       {/* agents */}
       <div className="h-screen bg-valorant-red flex flex-col justify-center gap-5">
         <div className="my-10">
-          <div className="text-[40px] font-Playfair italic text-valorant-white mt-10 mx-5">your</div>
+          <div className="text-[40px] font-Playfair italic text-valorant-white  mx-5">your</div>
           <div className="text-8xl font-Mohave font-bold tracking-tighter leading-[72px] uppercase text-valorant-white mx-5">
             agents
           </div>
@@ -57,7 +59,7 @@ const Main = () => {
           look the same.
         </p>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-10">
           <button className="h-[60px] w-[300px] bg-valorant-white rounded text-valorant-black font-bold uppercase">
             view all agents
           </button>
