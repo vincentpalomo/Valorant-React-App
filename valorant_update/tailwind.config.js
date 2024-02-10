@@ -8,7 +8,7 @@ module.exports = {
         'valorant-black': '#0F1923',
         'valorant-white': '#ECE8E1',
         'valorant-grey': '#768079',
-        'off-black': '#1E1E1E',
+        'off-black': '#0F0F0F',
         'off-white': '#F5F5F5',
       },
       fontFamily: {
