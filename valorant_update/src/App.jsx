@@ -4,7 +4,7 @@ import './index.css';
 function App() {
   return (
     <div className="App">
-      <header className="fixed">
+      <header className="fixed z-50">
         <Navigation />
       </header>
       <Main />

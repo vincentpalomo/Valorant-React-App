@@ -1,5 +1,4 @@
 import React from 'react';
-// import { fetchAgent } from '../api/api';
 
 const Main = () => {
   return (
@@ -14,12 +13,6 @@ const Main = () => {
             A 5v5 character-based tactical shooter
           </p>
         </div>
-        {/* <img
-          className="absolute -z-10 h-screen w-auto overflow-x-auto"
-          src={require('../images/omen-main.jpg')}
-          alt="omen main"
-        /> */}
-        <div className=""></div>
       </div>
 
       {/* about */}
@@ -71,6 +64,14 @@ const Main = () => {
             view all agents
           </button>
         </div>
+
+        {/* <div className="relative h-[24rem] overflow-hidden z-50">
+          <img
+            className="absolute scale-105 bottom-0"
+            src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
+            alt="gekko"
+          />
+        </div> */}
       </div>
 
       {/* maps */}
