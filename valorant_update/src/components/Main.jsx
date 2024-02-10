@@ -39,49 +39,50 @@ const Main = () => {
       </div>
       {/* agents */}
       <div className="h-screen bg-valorant-red flex flex-col justify-center gap-5">
-        <div>
-          <div className="text-[40px] font-Playfair italic text-valorant-white mt-10 mx-9">your</div>
-          <div className="text-8xl font-Mohave font-bold tracking-tighter leading-[72px] uppercase text-valorant-white mx-9">
+        <div className="my-10">
+          <div className="text-[40px] font-Playfair italic text-valorant-white mt-10 mx-5">your</div>
+          <div className="text-8xl font-Mohave font-bold tracking-tighter leading-[72px] uppercase text-valorant-white mx-5">
             agents
           </div>
-
-          <div>
-            creativity <span>is</span> your greatest weapon
-          </div>
-
-          <p>
-            More than guns and bullets, you'll choose an Agent armed with adaptive, swift, and lethal abilities that
-            create opportunities to let your gunplay shine. No two Agents play alike, just as no two highlights reels
-            will look the same.
-          </p>
         </div>
 
-        <div className="flex justify-center mt-10">
+        <div className="text-[23.04px] mx-5 tracking-wide uppercase font-bold text-valorant-white">
+          creativity <span className="font-Playfair lowercase italic font-thin text-xl -mx-1">is</span> your greatest
+          weapon
+        </div>
+
+        <p className="text-[19.20px] text-valorant-white tracking-wider leading-tight mx-5 mb-20">
+          More than guns and bullets, you'll choose an Agent armed with adaptive, swift, and lethal abilities that
+          create opportunities to let your gunplay shine. No two Agents play alike, just as no two highlights reels will
+          look the same.
+        </p>
+
+        <div className="flex justify-center">
           <button className="h-[60px] w-[300px] bg-valorant-white rounded text-valorant-black font-bold uppercase">
-            learn the game
+            view all agents
           </button>
         </div>
       </div>
 
       {/* maps */}
       <div className="h-screen bg-valorant-white flex flex-col justify-center gap-5">
-        <div>
-          <div>your</div>
-          <div>maps</div>
+        <div className="mb-16">
+          <div className="font-Playfair italic text-[40px] mx-5">your</div>
+          <div className="font-Mohave font-bold uppercase tracking-tighter leading-[68px] text-8xl mx-5">maps</div>
         </div>
 
-        <div>
-          fight around <span>the</span> world
+        <div className="text-[23.04px] mx-6 tracking-wide uppercase font-bold">
+          fight around <span className="font-Playfair lowercase italic font-thin text-xl -mx-1">the</span> world
         </div>
 
-        <p>
+        <p className="text-[19.20px] text-valorant-black tracking-wider leading-tight mx-6 mb-36">
           Each map is a playground to showcase your creative thinking. Purpose-built for team strategies, spectacular
           plays, and clutch moments. Make the play others will imitate for years to come..
         </p>
 
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center">
           <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
-            learn the game
+            view all maps
           </button>
         </div>
       </div>
@@ -89,6 +90,7 @@ const Main = () => {
       {/* footer */}
       <div className="h-screen flex flex-col justify-around gap-5">
         {/* <img src={require('../images/mobile-valorant-title-red.svg')} alt="logo" /> */}
+        {/* valorant title */}
         <div className="flex justify-center mt-24 h-96">
           <svg width="361" height="52" viewBox="0 0 361 52" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_85_39)">
@@ -186,7 +188,7 @@ const Main = () => {
           </div>
         </div>
 
-        <p className="text-[10px] text-center text-off-white px-6">
+        <p className="text-[10px] text-center text-off-white px-6 leading-tight mb-5">
           © 2020-2024 Riot Games, Inc. RIOT GAMES, VALORANT and any associated logos are trademarks, service marks,
           and/or registered trademarks of Riot Games, Inc.
         </p>
