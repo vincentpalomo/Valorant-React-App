@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <>
       {/* mobile */}
-      <div className="h-[100px] w-screen flex justify-between items-center px-10 bg-off-black">
+      <div className="h-[100px] w-screen flex justify-between items-center px-10 bg-off-black sm:hidden">
         {/* logo */}
         <button className=" font-Mohave text-neutral-200">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
@@ -36,7 +36,7 @@ const Navigation = () => {
 
         {/* nav menu open */}
         {isOpen && (
-          <div className="fixed inset-0 z-50 bg-off-black overflow-hidden border">
+          <div className="fixed inset-0 z-50 bg-off-black overflow-hidden sm:hidden">
             <div className="absolute right-10 top-[34px]">
               <button onClick={toggleMenu}>
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,6 +65,36 @@ const Navigation = () => {
             </div>
           </div>
         )}
+      </div>
+
+      {/* desktop */}
+      <div className="h-[100px] w-screen bg-off-black hidden sm:block">
+        <div className="text-off-white flex justify-between items-center h-full mx-10">
+          <ul className="flex justify-between w-1/5 text-base font-sans font-bold uppercase tracking-wide">
+            <li>agents</li>
+            <li>weapons</li>
+            <li>maps</li>
+          </ul>
+
+          <div className="w-1/2 flex justify-between">
+            <button className=" font-Mohave text-neutral-200">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                <path
+                  fill="#ff5252"
+                  d="M5,10.885v11.761c0,0.878,0.289,1.732,0.823,2.43L17.4,40.215C17.778,40.71,18.365,41,18.988,41	h9.951c0.835,0,1.302-0.963,0.785-1.619L6.785,10.266C6.198,9.521,5,9.936,5,10.885z"
+                ></path>
+                <path
+                  fill="#ff5252"
+                  d="M27.245,28.389l13.964-18.07C41.792,9.563,43,9.976,43,10.93v12.465c0,0.395-0.117,0.781-0.336,1.109	l-3.07,4.606C39.223,29.666,38.598,30,37.93,30h-9.893C27.206,30,26.737,29.046,27.245,28.389z"
+                ></path>
+              </svg>
+            </button>
+
+            <button className="h-[60px] w-[120px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+              play free
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );
