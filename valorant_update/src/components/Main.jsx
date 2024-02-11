@@ -311,7 +311,7 @@ const Main = () => {
 
           {/* video */}
           <div className="flex items-center justify-center w-full">
-            <div className="opacity-90 w-[534px] h-[356px] 2xl:w-[550px] 2xl:h-[366.67px] overflow-hidden flex items-center justify-center">
+            <div className="opacity-90 w-[534px] h-[356px] 2xl:w-[800px] 2xl:h-[450px] overflow-hidden flex items-center justify-center">
               <video className=" scale-125" src={ep08} autoPlay loop muted />
             </div>
           </div>
@@ -321,7 +321,7 @@ const Main = () => {
       {/* agents */}
       <div className="hidden sm:flex flex-col justify-end items-start h-screen bg-valorant-red text-valorant-white relative">
         {/* top sub title */}
-        <div className="font-Mohave font-bold uppercase text-8xl absolute top-36 left-8 tracking-tighter">
+        <div className="font-Mohave font-bold uppercase text-8xl absolute 2xl:top-28 top-24 left-8 tracking-tighter">
           creativity{' '}
           <span className="font-Playfair italic font-normal tracking-tight lowercase text-[64px] relative bottom-3">
             is
@@ -329,7 +329,7 @@ const Main = () => {
           your greatest weapon.
         </div>
 
-        <div className="w-full flex mb-10">
+        <div className="w-full flex mb-20">
           {/* agent images */}
           <div className="w-1/2 relative">
             <div className="absolute bottom-24 2xl:-bottom-4 right-40">
