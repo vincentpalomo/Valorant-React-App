@@ -237,7 +237,7 @@ const Main = () => {
           <video
             className="absolute bottom-0 scale-[2.2] -z-10 opacity-75"
             src={rep08}
-            onPlay={(event) => (event.target.currentTime = 20)}
+            onPlay={(event) => (event.target.currentTime = 5)}
             autoPlay
             loop
             muted
