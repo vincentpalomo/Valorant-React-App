@@ -70,7 +70,7 @@ const Navigation = () => {
       {/* desktop */}
       <div className="h-[100px] w-screen bg-off-black hidden sm:block">
         <div className="text-off-white flex justify-between items-center h-full mx-10">
-          <ul className="flex justify-between w-1/5 text-base font-sans font-bold uppercase tracking-wide">
+          <ul className="flex justify-between w-1/5 2xl:w-1/6 2xl:ml-3 text-base font-sans font-bold uppercase tracking-wide">
             <li>
               <a href="/">agents</a>
             </li>
