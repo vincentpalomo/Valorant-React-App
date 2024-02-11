@@ -1,4 +1,6 @@
 import React from 'react';
+import ep08 from '../videos/ep-08.mp4';
+import rep08 from '../videos/RECKONING-ep08.mp4';
 
 const Main = () => {
   return (
@@ -228,15 +230,19 @@ const Main = () => {
       </div>
 
       {/* desktop */}
+      {/* main */}
       <div className="hidden flex-col justify-end items-start h-screen sm:flex">
-        <div className="h-screen bg-main-omen bg-[length:1390px_782px] bg-[top_75px_right_-290px] sm:bg-cover sm:bg-center w-screen absolute -z-10 opacity-75"></div>
+        {/* <div className="h-screen bg-main-omen bg-[length:1390px_782px] bg-[top_75px_right_-290px] sm:bg-cover sm:bg-center w-full absolute -z-10 opacity-75 overflow-hidden"></div> */}
+        <div className="h-screen w-full overflow-hidden absolute pointer-events-none">
+          <video className="absolute bottom-0 scale-[2.2] -z-10 opacity-75" src={rep08} autoPlay loop muted />
+        </div>
 
-        <p className="font-sans font-bold text-neutral-200 tracking-wide uppercase text-[23.04px] mb-6 ml-12">
+        <p className="font-sans font-bold text-neutral-200 tracking-wide uppercase text-[23.04px] mb-6 ml-12 2xl:ml-16">
           A 5v5 character-based tactical shooter
         </p>
 
-        {/* logo */}
-        <div className="w-full flex justify-center mb-10">
+        {/* logo @1440px*/}
+        <div className="w-full flex justify-center mb-10 2xl:hidden">
           <svg width="1340" height="192.57" viewBox="0 0 349 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_50_366)">
               <path
@@ -250,6 +256,56 @@ const Main = () => {
               </clipPath>
             </defs>
           </svg>
+        </div>
+
+        {/* logo @1540+ */}
+        <div className="w-full 2xl:flex justify-center mb-10 hidden">
+          <svg width="1800" height="258.68" viewBox="0 0 349 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_50_366)">
+              <path
+                d="M310.977 9.69698H323.458L323.497 47.8727C323.497 48.3636 323.897 48.7674 324.394 48.7674L331.541 48.7621C332.038 48.7621 332.438 48.3636 332.438 47.8674L332.396 9.69698H348.049C348.509 9.69698 348.771 9.16119 348.477 8.80223L343.119 2.10618C342.672 1.544 341.992 1.21936 341.275 1.21672H310.977C310.479 1.21672 310.08 1.61527 310.08 2.11146V8.80752C310.08 9.29316 310.479 9.69698 310.977 9.69698ZM9.73167 47.8779L46.3458 2.11146C46.6342 1.75251 46.3749 1.21672 45.9145 1.21672H36.7597C36.0426 1.21672 35.36 1.54664 34.9128 2.10618L8.93789 34.5703V2.10618C8.93789 1.60998 8.53836 1.21144 8.04358 1.21144H0.894317C0.39953 1.21144 0 1.60998 0 2.10618V47.8727C0 48.3689 0.39953 48.7674 0.894317 48.7674H7.88747C8.60451 48.7674 9.28187 48.4401 9.73167 47.8779ZM35.5452 47.8779L48.1398 32.1368L60.7343 47.8779C61.1815 48.4401 61.8641 48.7674 62.5838 48.7674H69.5743C70.0717 48.7674 70.4713 48.3689 70.4713 47.8727V2.10618C70.4713 1.61527 70.0717 1.21144 69.5743 1.21144H63.711C62.2742 1.21144 60.9142 1.86336 60.0146 2.98509L24.1096 47.8674C23.8212 48.2263 24.0805 48.7621 24.5408 48.7621H33.6957C34.418 48.7674 35.0954 48.4401 35.5452 47.8779ZM61.5281 14.4399V35.5257L53.0929 24.9841L61.5281 14.4399ZM265.959 47.8674L229.348 2.10091C228.901 1.54136 228.221 1.21408 227.504 1.21144H220.505C220.01 1.21144 219.611 1.60998 219.611 2.10618V47.8727C219.611 48.3689 220.01 48.7674 220.505 48.7674H227.498C228.215 48.7674 228.898 48.4401 229.342 47.8779L241.937 32.1368L254.529 47.8779C254.979 48.4401 255.656 48.7674 256.376 48.7674H265.531C265.991 48.7674 266.248 48.2316 265.959 47.8674ZM236.976 24.9841L228.538 35.531V14.4399L236.976 24.9841ZM136.222 0.0263672C122.421 0.0263672 111.234 11.2014 111.234 24.9894C111.234 38.7774 122.421 49.9551 136.222 49.9551C150.026 49.9551 161.213 38.7774 161.213 24.9894C161.218 11.2014 150.026 0.0263672 136.222 0.0263672ZM136.222 41.4696C127.356 41.4696 120.172 34.0899 120.172 24.9894C120.172 15.8889 127.356 8.50399 136.222 8.50399C145.091 8.50399 152.275 15.8836 152.275 24.9894C152.28 34.0899 145.091 41.4696 136.222 41.4696ZM294.935 2.10618V34.5703L268.96 2.10091C268.51 1.54136 267.833 1.21408 267.113 1.21144H260.112C259.62 1.21144 259.217 1.60998 259.217 2.10618V24.1607C259.217 24.6965 259.397 25.2164 259.736 25.6361L267.174 34.9345C267.502 35.3436 268.161 35.1114 268.161 34.5914V15.398L294.141 47.8779C294.588 48.4401 295.268 48.7674 295.985 48.7674H302.978C303.473 48.7674 303.873 48.3689 303.873 47.8727V2.10618C303.873 1.61527 303.473 1.21144 302.978 1.21144H295.829C295.334 1.21144 294.935 1.61527 294.935 2.10618ZM207.593 12.0249V2.10618C207.593 1.60998 207.194 1.21144 206.699 1.21144H170.111C169.616 1.21144 169.217 1.60998 169.217 2.10618V47.8727C169.217 48.3689 169.616 48.7674 170.111 48.7674H177.26C177.755 48.7674 178.155 48.3689 178.155 47.8727V9.70226H198.655L184.817 27.0059C184.56 27.3279 184.56 27.7924 184.817 28.1223L200.626 47.8832C201.076 48.4454 201.754 48.7727 202.473 48.7727H211.628C212.088 48.7727 212.345 48.2369 212.057 47.8779L195.808 27.5707L207.072 13.5108C207.405 13.0806 207.593 12.5607 207.593 12.0249ZM82.0974 48.7674H103.312C104.029 48.7674 104.712 48.4401 105.157 47.8779L110.515 41.1766C110.803 40.8177 110.546 40.2819 110.086 40.2819H90.141V2.10618C90.141 1.60998 89.7414 1.21144 89.2467 1.21144H82.0974C81.6026 1.21144 81.2031 1.60998 81.2031 2.10618V47.8727C81.2031 48.3636 81.6079 48.7674 82.0974 48.7674Z"
+                fill="#ECE8E1"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_50_366">
+                <rect width="348.837" height="50" fill="#ECE8E1" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      {/* about */}
+      <div className="hidden flex-col justify-center items-start h-screen sm:flex bg-valorant-white text-valorant-black">
+        <div className="ml-24 2xl:ml-32 mt-10">
+          <div className="font-Playfair italic font-bold text-[64px]">we are</div>
+          <div className="font-Mohave font-bold text-[300px] uppercase tracking-tighter leading-[16rem]">valorant</div>
+        </div>
+
+        <div className="w-full flex ">
+          {/* text */}
+          <div className="ml-24 2xl:ml-32 flex flex-col gap-5">
+            <div className="font-sans font-bold uppercase tracking-wide text-[23.04px]">
+              defy <span className="font-Playfair lowercase italic font-normal text-[20px] -mx-1">the</span> limits
+            </div>
+            <div className="w-[675px] text-[19.20px] font-sans tracking-wider leading-[24px] text-valorant-grey">
+              Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend
+              your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think
+              faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as
+              well as Deathmatch and Spike Rush.
+            </div>
+            <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+              learn the game
+            </button>
+          </div>
+
+          {/* video */}
+          <div className="flex items-center justify-center w-full">
+            <div className="opacity-90 w-[534px] h-[356px] 2xl:w-[550px] 2xl:h-[366.67px] overflow-hidden flex items-center justify-center">
+              <video className=" scale-125" src={ep08} autoPlay loop muted />
+            </div>
+          </div>
         </div>
       </div>
     </>

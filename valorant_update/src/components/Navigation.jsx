@@ -71,14 +71,20 @@ const Navigation = () => {
       <div className="h-[100px] w-screen bg-off-black hidden sm:block">
         <div className="text-off-white flex justify-between items-center h-full mx-10">
           <ul className="flex justify-between w-1/5 text-base font-sans font-bold uppercase tracking-wide">
-            <li>agents</li>
-            <li>weapons</li>
-            <li>maps</li>
+            <li>
+              <a href="/">agents</a>
+            </li>
+            <li>
+              <a href="/">weapons</a>
+            </li>
+            <li>
+              <a href="/">maps</a>
+            </li>
           </ul>
 
-          <div className="w-1/2 flex justify-between">
+          <div className="w-1/2 flex justify-between items-center">
             <button className=" font-Mohave text-neutral-200">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="75" height="75" viewBox="0 0 48 48">
                 <path
                   fill="#ff5252"
                   d="M5,10.885v11.761c0,0.878,0.289,1.732,0.823,2.43L17.4,40.215C17.778,40.71,18.365,41,18.988,41	h9.951c0.835,0,1.302-0.963,0.785-1.619L6.785,10.266C6.198,9.521,5,9.936,5,10.885z"
