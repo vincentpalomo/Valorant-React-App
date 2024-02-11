@@ -234,7 +234,14 @@ const Main = () => {
       <div className="hidden flex-col justify-end items-start h-screen sm:flex">
         {/* <div className="h-screen bg-main-omen bg-[length:1390px_782px] bg-[top_75px_right_-290px] sm:bg-cover sm:bg-center w-full absolute -z-10 opacity-75 overflow-hidden"></div> */}
         <div className="h-screen w-full overflow-hidden absolute pointer-events-none">
-          <video className="absolute bottom-0 scale-[2.2] -z-10 opacity-75" src={rep08} autoPlay loop muted />
+          <video
+            className="absolute bottom-0 scale-[2.2] -z-10 opacity-75"
+            src={rep08}
+            onPlay={(event) => (event.target.currentTime = 20)}
+            autoPlay
+            loop
+            muted
+          />
         </div>
 
         <p className="font-sans font-bold text-neutral-200 tracking-wide uppercase text-[23.04px] mb-6 ml-12 2xl:ml-16">
