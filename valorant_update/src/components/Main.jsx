@@ -369,6 +369,32 @@ const Main = () => {
           </div>
         </div>
       </div>
+
+      {/* maps */}
+      <div className="hidden sm:flex flex-col justify-center items-center h-screen bg-valorant-white text-valorant-black gap-5">
+        <div className="bg-map-section bg-cover h-screen w-full absolute opacity-50 z-0"></div>
+        <div className="font-Mohave font-bold uppercase text-8xl tracking-tighter mt-20 z-10">
+          fight around{' '}
+          <span className="font-Playfair italic font-normal tracking-tight lowercase text-[64px] relative bottom-3">
+            the
+          </span>{' '}
+          world
+        </div>
+
+        <div className="flex flex-col items-center z-10">
+          <div className="font-Playfair italic text-[64px] tracking-tight">your</div>
+          <div className="font-Mohave font-bold uppercase text-[300px] tracking-tighter leading-[17rem]">maps</div>
+        </div>
+
+        <p className="font-sans text-[19.20px] w-[450px] tracking-wider leading-6 text-center mb-10 z-10">
+          Each map is a playground to showcase your creative thinking. Purpose-built for team strategies, spectacular
+          plays, and clutch moments. Make the play others will imitate for years to come..
+        </p>
+
+        <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase z-10">
+          view all maps
+        </button>
+      </div>
     </>
   );
 };
