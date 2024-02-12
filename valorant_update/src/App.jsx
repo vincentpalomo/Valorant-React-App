@@ -1,6 +1,7 @@
-import { Agents, Main, Navigation } from './components';
+import { Agents, Main, Maps, Navigation } from './components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
+import Weapons from './components/Weapons';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="/agents" element={<Agents />} />
+            <Route path="/weapons" element={<Weapons />} />
+            <Route path="/maps" element={<Maps />} />
           </Routes>
         </section>
       </div>
