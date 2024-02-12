@@ -72,7 +72,7 @@ const Navigation = () => {
         <div className="text-off-white flex justify-between items-center h-full mx-10 2xl:mx-14">
           <ul className="flex justify-between w-1/5 2xl:w-1/6 text-base font-sans font-bold uppercase tracking-wide">
             <li>
-              <a href="/">agents</a>
+              <a href="/agents">agents</a>
             </li>
             <li>
               <a href="/">weapons</a>
