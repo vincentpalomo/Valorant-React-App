@@ -77,9 +77,11 @@ const Main = () => {
         </p>
 
         <div className="flex justify-center mt-10 z-10">
-          <button className="h-[60px] w-[300px] bg-valorant-white rounded text-valorant-black font-bold uppercase">
-            view all agents
-          </button>
+          <a href="/agents">
+            <button className="h-[60px] w-[300px] bg-valorant-white rounded text-valorant-black font-bold uppercase">
+              view all agents
+            </button>
+          </a>
         </div>
 
         <img
@@ -109,9 +111,11 @@ const Main = () => {
         </p>
 
         <div className="flex justify-center z-0">
-          <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
-            view all maps
-          </button>
+          <a href="/maps">
+            <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+              view all maps
+            </button>
+          </a>
         </div>
       </div>
 
