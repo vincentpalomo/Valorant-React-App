@@ -460,13 +460,13 @@ const Main = () => {
 
         {/* viper */}
         <img
-          className="absolute scale-75 z-10 right-28 top-16"
+          className="absolute scale-75 2xl:scale-100 z-10 right-28 top-16 2xl:top-48"
           src="https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/fullportrait.png"
           alt="viper"
         />
         {/* omen */}
         <img
-          className="absolute scale-75 left-16"
+          className="absolute scale-75 2xl:scale-100 left-16 2xl:top-32"
           src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png"
           alt="omen"
         />
