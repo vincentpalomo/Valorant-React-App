@@ -397,9 +397,9 @@ const Main = () => {
       </div>
 
       {/* footer */}
-      <div className="hidden sm:flex flex-col justify-start items-center h-screen bg-off-black text-valorant-white">
+      <div className="hidden sm:flex flex-col justify-start items-center h-screen bg-off-black text-valorant-white relative overflow-hidden">
         {/* logo */}
-        <div className="mt-32">
+        <div className="mt-32 z-10">
           {/* logo @1440px*/}
           <div className="w-full flex justify-center mb-10 2xl:hidden">
             <svg width="1340" height="192.57" viewBox="0 0 349 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -434,7 +434,42 @@ const Main = () => {
             </svg>
           </div>
         </div>
-        <div>footer section</div>
+
+        {/* content */}
+        <div className="flex justify-between w-full h-full">
+          {/* navigation */}
+          <div className="w-1/2 flex justify-center items-center">
+            <div className="w-[70%] h-[55%] flex flex-col 2xl:ml-20">
+              <div className="font-Playfair italic tracking-tighter text-[64px]">navigation</div>
+              <ul className="font-sans text-[19.2px] text-valorant-red -mt-2">
+                <li>about</li>
+                <li>agents</li>
+                <li>weapons</li>
+                <li>maps</li>
+              </ul>
+            </div>
+          </div>
+          {/* play now */}
+          <div className="w-1/2 flex justify-center items-center">
+            <div className="w-[60%] h-[50%] flex flex-col items-end 2xl:mr-20">
+              <div className="font-Playfair italic tracking-tighter text-[64px]">play now</div>
+              <div className="font-sans text-[19.2px] text-valorant-red mr-5 -mt-2">download game client</div>
+            </div>
+          </div>
+        </div>
+
+        {/* viper */}
+        <img
+          className="absolute scale-75 z-10 right-28 top-16"
+          src="https://media.valorant-api.com/agents/707eab51-4836-f488-046a-cda6bf494859/fullportrait.png"
+          alt="viper"
+        />
+        {/* omen */}
+        <img
+          className="absolute scale-75 left-16"
+          src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png"
+          alt="omen"
+        />
       </div>
     </>
   );
