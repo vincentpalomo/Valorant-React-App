@@ -350,7 +350,7 @@ const Main = () => {
 
           {/* text content */}
           <div className="flex flex-col">
-            <div className="">
+            <div>
               <div className="font-Playfair italic text-[64px] tracking-tight ml-14">your</div>
               <div className="font-Mohave font-bold uppercase text-[300px] tracking-tighter leading-[18rem] mr-12">
                 agents
@@ -363,9 +363,11 @@ const Main = () => {
               will look the same.
             </p>
 
-            <button className="h-[60px] w-[300px] bg-valorant-white rounded text-valorant-black font-bold uppercase mt-5 ml-36">
-              view all agents
-            </button>
+            <a href="/agents">
+              <button className="h-[60px] w-[300px] bg-valorant-white rounded text-valorant-black font-bold uppercase mt-5 ml-36">
+                view all agents
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -391,9 +393,11 @@ const Main = () => {
           plays, and clutch moments. Make the play others will imitate for years to come..
         </p>
 
-        <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase z-10">
-          view all maps
-        </button>
+        <a className="z-10" href="/maps">
+          <button className="h-[60px] w-[300px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+            view all maps
+          </button>
+        </a>
       </div>
 
       {/* footer */}
@@ -441,11 +445,19 @@ const Main = () => {
           <div className="w-1/2 flex justify-center items-center">
             <div className="w-[70%] h-[55%] flex flex-col 2xl:ml-20">
               <div className="font-Playfair italic tracking-tighter text-[64px]">navigation</div>
-              <ul className="font-sans text-[19.2px] text-valorant-red -mt-2">
-                <li>about</li>
-                <li>agents</li>
-                <li>weapons</li>
-                <li>maps</li>
+              <ul className="font-sans text-[19.2px] text-valorant-red -mt-2 z-40">
+                <li>
+                  <a href="/">about</a>
+                </li>
+                <li>
+                  <a href="/agents">agents</a>
+                </li>
+                <li>
+                  <a href="/weapons">weapons</a>
+                </li>
+                <li>
+                  <a href="/maps">maps</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -453,7 +465,9 @@ const Main = () => {
           <div className="w-1/2 flex justify-center items-center">
             <div className="w-[60%] h-[50%] flex flex-col items-end 2xl:mr-20">
               <div className="font-Playfair italic tracking-tighter text-[64px]">play now</div>
-              <div className="font-sans text-[19.2px] text-valorant-red mr-5 -mt-2">download game client</div>
+              <div className="font-sans text-[19.2px] text-valorant-red mr-5 -mt-2 z-40">
+                <a href="/">download game client</a>
+              </div>
             </div>
           </div>
         </div>
