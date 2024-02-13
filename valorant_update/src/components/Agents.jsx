@@ -24,7 +24,7 @@ const Agents = () => {
 
   return (
     <div className="h-screen bg-valorant-red flex flex-col justify-center items-center">
-      <div className="font-Playfair text-off-white">showing data from fetch object</div>
+      <div className="font-Playfair text-off-white text-6xl">showing data from fetch agent object</div>
       <div>
         {agents.data?.map((agent) => {
           return <div key={agent.uuid}>{agent.isPlayableCharacter && <div>{agent.displayName}</div>}</div>;
