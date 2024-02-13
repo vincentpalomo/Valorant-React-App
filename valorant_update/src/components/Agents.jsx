@@ -23,11 +23,20 @@ const Agents = () => {
   console.log(agents.data);
 
   return (
-    <div className="h-screen bg-valorant-red flex flex-col justify-center items-center">
+    <div className="h-screen bg-valorant-red flex flex-col justify-center items-center overflow-hidden">
       <div className="font-Playfair text-off-white text-6xl">showing data from fetch agent object</div>
-      <div>
+      <div className="text-off-white flex">
         {agents.data?.map((agent) => {
-          return <div key={agent.uuid}>{agent.isPlayableCharacter && <div>{agent.displayName}</div>}</div>;
+          return (
+            <div key={agent.uuid}>
+              {agent.isPlayableCharacter && (
+                <div>
+                  <div>{agent.displayName}</div>
+                  <div>{agent.role.displayName}</div>
+                </div>
+              )}
+            </div>
+          );
         })}
       </div>
     </div>

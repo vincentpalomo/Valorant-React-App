@@ -23,11 +23,16 @@ const Weapons = () => {
   console.log(weapons.data);
 
   return (
-    <div className="h-screen bg-valorant-white flex flex-col justify-center items-center">
+    <div className="h-screen bg-valorant-white flex flex-col justify-center items-center overflow-hidden">
       <div className="font-Playfair text-6xl">displaying data from fetch weapons object</div>
-      <div>
+      <div className="flex">
         {weapons.data?.map((weapon) => {
-          return <div key={weapon.uuid}>{<div>{weapon.displayName}</div>}</div>;
+          return (
+            <div key={weapon.uuid}>
+              <div>{weapon.displayName}</div>
+              <img src={weapon.displayIcon} alt={weapon.displayName} />
+            </div>
+          );
         })}
       </div>
     </div>
