@@ -109,11 +109,11 @@ const Agents = () => {
 
       {/* desktop */}
       <div className="hidden h-screen bg-valorant-white sm:flex flex-col justify-center items-center relative">
-        <div className="absolute top-[250px] font-Mohave font-bold uppercase tracking-tighter text-valorant-red text-[300px] leading-3">
+        <div className="absolute top-[250px] font-Mohave font-bold uppercase tracking-tighter text-valorant-red text-[300px] leading-3 z-10">
           agents
         </div>
 
-        <div className="font-Mohave font-bold uppercase tracking-tighter text-valorant-black text-8xl relative ml-5 whitespace-pre-wrap mb-[105px]">
+        <div className="font-Mohave font-bold uppercase tracking-tighter text-valorant-black text-8xl relative ml-5 whitespace-pre-wrap mb-[105px] z-10">
           check{' '}
           <span className="font-Playfair italic font-normal lowercase text-valorant-red text-[64px] absolute bottom-8 -mx-1">
             the
@@ -123,13 +123,13 @@ const Agents = () => {
         </div>
 
         {/* agent select */}
-        <div className="absolute h-[450px] w-[1350px] bg-valorant-black flex justify-around items-center bottom-5">
+        <div className="absolute h-[450px] w-[1350px] bg-valorant-black flex justify-around items-center bottom-5 z-10">
           <p className="font-sans text-valorant-grey leading-tight tracking-wide text-[19.20px] w-[600px] text-center absolute top-3">
             Find more ways to plant the Spike on your enemies with scrappers, strategists, and hunters of every
             description.
           </p>
 
-          <div className="text-off-white flex justify-around h-[60%] w-full">
+          <div className="text-off-white flex justify-around h-[70%] w-full">
             {/* Duelist Agents */}
             <div className="w-[275px] flex flex-col items-center">
               <h2 className="text-valorant-white font-Playfair italic lowercase text-[64px]">Duelists</h2>
@@ -138,7 +138,7 @@ const Agents = () => {
                 .map((agent) => (
                   <div
                     onClick={() => handleAgentSelect(agent.uuid)}
-                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    className="text-valorant-red cursor-pointer text-[19.2px] hover:border-b-2 hover:border-valorant-white"
                     key={agent.uuid}
                   >
                     {agent.displayName}
@@ -154,7 +154,7 @@ const Agents = () => {
                 .map((agent) => (
                   <div
                     onClick={() => handleAgentSelect(agent.uuid)}
-                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    className="text-valorant-red cursor-pointer text-[19.2px] hover:border-b-2 hover:border-valorant-white"
                     key={agent.uuid}
                   >
                     {agent.displayName}
@@ -170,7 +170,7 @@ const Agents = () => {
                 .map((agent) => (
                   <div
                     onClick={() => handleAgentSelect(agent.uuid)}
-                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    className="text-valorant-red cursor-pointer text-[19.2px] hover:border-b-2 hover:border-valorant-white"
                     key={agent.uuid}
                   >
                     {agent.displayName}
@@ -186,7 +186,7 @@ const Agents = () => {
                 .map((agent) => (
                   <div
                     onClick={() => handleAgentSelect(agent.uuid)}
-                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    className="text-valorant-red cursor-pointer text-[19.2px] hover:border-b-2 hover:border-valorant-white"
                     key={agent.uuid}
                   >
                     {agent.displayName}
@@ -196,6 +196,19 @@ const Agents = () => {
           </div>
         </div>
         <div className="absolute z-40">{selectedAgent && <AgentInfo agentId={selectedAgent} onClose={noAgent} />}</div>
+
+        <div className="absolute w-full h-screen overflow-hidden">
+          <img
+            className="absolute scale-[.6] 2xl:scale-50 z-0 right-[500px] -bottom-48 2xl:-bottom-96"
+            src="https://media.valorant-api.com/agents/f94c3b30-42be-e959-889c-5aa313dba261/fullportrait.png"
+            alt="raze"
+          />
+          <img
+            className="absolute scale-[.6] 2xl:scale-50 z-0 left-[500px] -bottom-48 2xl:-bottom-96"
+            src="https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/fullportrait.png"
+            alt="killjoy"
+          />
+        </div>
       </div>
     </>
   );
