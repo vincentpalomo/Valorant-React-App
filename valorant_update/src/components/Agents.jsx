@@ -129,7 +129,7 @@ const Agents = () => {
             description.
           </p>
 
-          <div className="text-off-white flex justify-around w-full">
+          <div className="text-off-white flex justify-around h-[60%] w-full">
             {/* Duelist Agents */}
             <div className="w-[275px] flex flex-col items-center">
               <h2 className="text-valorant-white font-Playfair italic lowercase text-[64px]">Duelists</h2>
