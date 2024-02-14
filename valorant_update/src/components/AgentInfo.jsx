@@ -28,7 +28,7 @@ const AgentInfo = ({ agentId, onClose }) => {
     <>
       {/* mobile view */}
       <div className="sm:hidden h-screen w-screen bg-valorant-black flex flex-col justify-center items-start px-5 gap-5">
-        <div className="flex flex-col items-start gap-1 mt-20">
+        <div className="flex flex-col items-start gap-2 mt-20">
           <button onClick={handleGoBack} className="text-valorant-red uppercase font-sans font-bold z-10">
             back
           </button>
@@ -49,7 +49,7 @@ const AgentInfo = ({ agentId, onClose }) => {
           {agent?.data.description}
         </p>
 
-        <div className="flex justify-center items-center gap-3 w-full pt-2">
+        <div className="flex justify-center items-center gap-3 w-full pt-5">
           {agent?.data.abilities.map((ability) => {
             return (
               <div className="flex flex-col items-center" key={ability.slot}>
