@@ -24,8 +24,6 @@ const AgentInfo = ({ agentId, onClose }) => {
     onClose();
   };
 
-  console.log('agent:', agent?.data);
-
   return (
     <>
       {/* mobile view */}
@@ -56,7 +54,7 @@ const AgentInfo = ({ agentId, onClose }) => {
         <div className="flex justify-center items-center gap-3">
           {agent?.data.abilities.map((ability) => {
             return (
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center" key={ability.slot}>
                 <img className="h-14" src={ability.displayIcon} alt={ability.displayName} />
                 {/* <div>{ability.displayName}</div> */}
               </div>

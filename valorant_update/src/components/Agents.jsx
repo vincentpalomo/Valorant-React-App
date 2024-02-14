@@ -30,7 +30,6 @@ const Agents = () => {
   };
 
   const handleAgentSelect = (agentId) => {
-    console.log(agentId);
     setSelectedAgent(agentId);
     setOpen(false);
   };
