@@ -38,7 +38,7 @@ const AgentInfo = ({ agentId, onClose }) => {
         </div>
 
         {/* agent icon */}
-        <div className="h-[250px] -my-2 w-full flex items-center justify-center">
+        <div className="h-[250px] -my-2 w-full flex items-center justify-center bg-valorant-red rounded-md overflow-clip">
           <img src={agent?.data.displayIcon} alt={agent?.data.displayName} />
           {/* <img className="absolute -bottom-28 scale-[1.5]" src={agent?.data.background} alt={agent?.data.displayName} /> */}
         </div>
@@ -49,9 +49,7 @@ const AgentInfo = ({ agentId, onClose }) => {
           {agent?.data.description}
         </p>
 
-        {/* <div>abilites:</div> */}
-
-        <div className="flex justify-center items-center gap-3">
+        <div className="flex justify-center items-center gap-3 w-full pt-2">
           {agent?.data.abilities.map((ability) => {
             return (
               <div className="flex flex-col items-center" key={ability.slot}>
