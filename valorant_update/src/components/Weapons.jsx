@@ -23,14 +23,21 @@ const Weapons = () => {
   console.log(weapons.data);
 
   return (
-    <div className="h-screen bg-valorant-white flex flex-col justify-center items-center overflow-hidden">
-      <div className="font-Playfair text-6xl">displaying data from fetch weapons object</div>
-      <div className="flex">
+    <div className="h-full bg-valorant-white flex flex-col justify-center items-center">
+      <div className="font-Mohave font-bold uppercase tracking-tighter text-8xl relative whitespace-pre-wrap mt-36">
+        choose{' '}
+        <span className="font-Playfair italic lowercase text-[64px] text-valorant-red absolute border-red-400">
+          your
+        </span>
+        {'       '}
+        weapon
+      </div>
+      <div className="grid sm:grid-cols-2 gap-5">
         {weapons.data?.map((weapon) => {
           return (
-            <div key={weapon.uuid}>
-              <div>{weapon.displayName}</div>
-              <img src={weapon.displayIcon} alt={weapon.displayName} />
+            <div className="w-96" key={weapon.uuid}>
+              <div className="font-Mohave font-bold tracking-tighter text-[64px] uppercase">{weapon.displayName}.</div>
+              <img className="scale-75" src={weapon.displayIcon} alt={weapon.displayName} />
             </div>
           );
         })}
