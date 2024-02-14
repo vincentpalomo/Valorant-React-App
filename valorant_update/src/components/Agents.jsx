@@ -104,7 +104,7 @@ const Agents = () => {
             </ul>
           )}
         </div>
-        <div className="absolute z-40">{selectedAgent && <AgentInfo agent={selectedAgent} onClose={noAgent} />}</div>
+        <div className="absolute z-40">{selectedAgent && <AgentInfo agentId={selectedAgent} onClose={noAgent} />}</div>
       </div>
 
       {/* desktop */}
