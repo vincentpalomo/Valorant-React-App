@@ -43,7 +43,7 @@ const AgentInfo = ({ agentId, onClose }) => {
         {/* <img className="absolute -bottom-28 scale-[1.5]" src={agent?.data.background} alt={agent?.data.displayName} /> */}
       </div>
 
-      <div className="font-Playfair italic text-valorant-red text-4xl">{agent?.data.role.displayName}</div>
+      <div className="font-Playfair italic text-valorant-red text-5xl">{agent?.data.role.displayName}</div>
 
       <p className="font-sans text-[19.2px] text-valorant-white leading-tight tracking-wide">
         {agent?.data.description}
