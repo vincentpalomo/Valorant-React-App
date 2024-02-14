@@ -108,22 +108,94 @@ const Agents = () => {
       </div>
 
       {/* desktop */}
-      <div className="hidden h-screen bg-valorant-red sm:flex flex-col justify-center items-center overflow-hidden">
-        <div className="font-Playfair text-off-white text-6xl">showing data from fetch agent object</div>
-        <div className="text-off-white flex">
-          {playableAgents?.map((agent) => {
-            return (
-              <div key={agent.uuid}>
-                {agent.isPlayableCharacter && (
-                  <div>
-                    <div>{agent.displayName}</div>
-                    <div>{agent.role.displayName}</div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+      <div className="hidden h-screen bg-valorant-white sm:flex flex-col justify-center items-center relative">
+        <div className="absolute top-[250px] font-Mohave font-bold uppercase tracking-tighter text-valorant-red text-[300px] leading-3">
+          agents
         </div>
+
+        <div className="font-Mohave font-bold uppercase tracking-tighter text-valorant-black text-8xl relative ml-5 whitespace-pre-wrap mb-[105px]">
+          check{' '}
+          <span className="font-Playfair italic font-normal lowercase text-valorant-red text-[64px] absolute bottom-8 -mx-1">
+            the
+          </span>
+          {'    '}
+          headcount
+        </div>
+
+        {/* agent select */}
+        <div className="absolute h-[450px] w-[1350px] bg-valorant-black flex justify-around items-center bottom-5">
+          <p className="font-sans text-valorant-grey leading-tight tracking-wide text-[19.20px] w-[600px] text-center absolute top-3">
+            Find more ways to plant the Spike on your enemies with scrappers, strategists, and hunters of every
+            description.
+          </p>
+
+          <div className="text-off-white flex justify-around w-full">
+            {/* Duelist Agents */}
+            <div className="w-[275px] flex flex-col items-center">
+              <h2 className="text-valorant-white font-Playfair italic lowercase text-[64px]">Duelists</h2>
+              {playableAgents
+                ?.filter((agent) => agent.role.displayName === 'Duelist')
+                .map((agent) => (
+                  <div
+                    onClick={() => handleAgentSelect(agent.uuid)}
+                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    key={agent.uuid}
+                  >
+                    {agent.displayName}
+                  </div>
+                ))}
+            </div>
+
+            {/* Controller Agents */}
+            <div className="w-[275px] flex flex-col items-center">
+              <h2 className="text-valorant-white font-Playfair italic lowercase text-[64px]">Controllers</h2>
+              {playableAgents
+                ?.filter((agent) => agent.role.displayName === 'Controller')
+                .map((agent) => (
+                  <div
+                    onClick={() => handleAgentSelect(agent.uuid)}
+                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    key={agent.uuid}
+                  >
+                    {agent.displayName}
+                  </div>
+                ))}
+            </div>
+
+            {/* Initiator Agents */}
+            <div className="w-[275px]  flex flex-col items-center">
+              <h2 className="text-valorant-white font-Playfair italic lowercase text-[64px]">Initiators</h2>
+              {playableAgents
+                ?.filter((agent) => agent.role.displayName === 'Initiator')
+                .map((agent) => (
+                  <div
+                    onClick={() => handleAgentSelect(agent.uuid)}
+                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    key={agent.uuid}
+                  >
+                    {agent.displayName}
+                  </div>
+                ))}
+            </div>
+
+            {/* Sentinel Agents */}
+            <div className="w-[275px] flex flex-col items-center">
+              <h2 className="text-valorant-white font-Playfair italic lowercase text-[64px]">Sentinels</h2>
+              {playableAgents
+                ?.filter((agent) => agent.role.displayName === 'Sentinel')
+                .map((agent) => (
+                  <div
+                    onClick={() => handleAgentSelect(agent.uuid)}
+                    className="text-valorant-red cursor-pointer hover:border-b-2 hover:border-valorant-white"
+                    key={agent.uuid}
+                  >
+                    {agent.displayName}
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
+        <div className="absolute z-40">{selectedAgent && <AgentInfo agentId={selectedAgent} onClose={noAgent} />}</div>
       </div>
     </>
   );
