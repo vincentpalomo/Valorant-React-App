@@ -74,7 +74,7 @@ const AgentInfo = ({ agentId, onClose }) => {
           </div>
         </div>
 
-        <div className="font-Playfair italic text-valorant-red text-[64px] leading-10">
+        <div className="font-Playfair italic text-valorant-red text-[64px] leading-[2.7rem]">
           {agent?.data.role.displayName}
         </div>
 
