@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchAllAgents } from '../api/api';
+import AgentInfo from './AgentInfo';
 
 const Agents = () => {
   const [agents, setAgents] = useState([]);
@@ -29,8 +30,13 @@ const Agents = () => {
   };
 
   const handleAgentSelect = (agentId) => {
+    console.log(agentId);
     setSelectedAgent(agentId);
     setOpen(false);
+  };
+
+  const noAgent = () => {
+    setSelectedAgent(null);
   };
 
   return (
@@ -42,7 +48,7 @@ const Agents = () => {
         </div>
 
         {/* agent images */}
-        <div className="h-[300px] relative mb-1">
+        <div className="h-[300px] relative mb-1 overflow-x-clip">
           <img
             className="absolute right-24 -bottom-6 scale-[.9] z-0"
             src="https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/fullportrait.png"
@@ -82,22 +88,23 @@ const Agents = () => {
           >
             {selectedAgent ? selectedAgent : 'Select an agent'}
           </button>
-          {open ? (
+          {open && (
             <ul className="absolute border border-valorant-grey max-h-[300px] overflow-y-auto bg-valorant-white bottom-[60px] z-20">
               {playableAgents?.map((agent) => {
                 return (
                   <div
                     className="hover:bg-valorant-red h-[60px] w-[348px] font-Mohave font-bold uppercase tracking-tighter text-5xl flex items-center pl-5"
                     key={agent.uuid}
-                    onClick={() => handleAgentSelect(agent.displayName)}
+                    onClick={() => handleAgentSelect(agent.uuid)}
                   >
-                    {agent.isPlayableCharacter && <li>{agent.displayName}</li>}
+                    <li>{agent.displayName}</li>
                   </div>
                 );
               })}
             </ul>
-          ) : null}
+          )}
         </div>
+        <div className="absolute z-40">{selectedAgent && <AgentInfo agent={selectedAgent} onClose={noAgent} />}</div>
       </div>
 
       {/* desktop */}
