@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+> - issues with site on macbook screen
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
