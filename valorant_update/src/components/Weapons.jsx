@@ -36,7 +36,7 @@ const Weapons = () => {
         {weapons.data?.map((weapon) => {
           return (
             <div className="w-96" key={weapon.uuid}>
-              <div className="font-Mohave font-bold tracking-tighter text-[64px] uppercase">{weapon.displayName}.</div>
+              <div className="font-tungsten font-bold tracking-snug text-[64px] uppercase">{weapon.displayName}.</div>
               <img className="scale-75" src={weapon.displayIcon} alt={weapon.displayName} />
             </div>
           );

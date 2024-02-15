@@ -32,7 +32,7 @@ const AgentInfo = ({ agentId, onClose }) => {
           <button onClick={handleGoBack} className="text-valorant-red uppercase font-sans font-bold z-10">
             back
           </button>
-          <div className="font-Mohave font-bold uppercase tracking-tighter leading-[5.5rem] text-valorant-white text-8xl -ml-2">
+          <div className="font-tungsten font-bold uppercase tracking-normal leading-[5.5rem] text-valorant-white text-8xl -ml-2">
             {agent?.data.displayName}
           </div>
         </div>
@@ -67,7 +67,7 @@ const AgentInfo = ({ agentId, onClose }) => {
           <button onClick={handleGoBack} className="text-valorant-red uppercase font-sans font-bold z-10">
             back
           </button>
-          <div className="font-Mohave font-bold uppercase tracking-tighter leading-[6rem] text-valorant-white text-[160px] -ml-2 mt-20">
+          <div className="font-tungsten font-bold uppercase tracking-normal leading-[6rem] text-valorant-white text-[160px] -ml-2 mt-20">
             {agent?.data.displayName}
           </div>
         </div>

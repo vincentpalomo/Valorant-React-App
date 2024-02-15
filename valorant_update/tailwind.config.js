@@ -14,6 +14,7 @@ module.exports = {
       fontFamily: {
         Mohave: ['Mohave', 'sans-serif'],
         Playfair: ['Playfair Display', 'sans-serif'],
+        tungsten: ['Tungsten', 'Mohave'],
       },
       backgroundImage: {
         'main-omen': "url('/src/images/omen-main.jpg')",

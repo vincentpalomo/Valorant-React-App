@@ -92,7 +92,7 @@ const Agents = () => {
               {playableAgents?.map((agent) => {
                 return (
                   <div
-                    className="hover:bg-valorant-red h-[60px] w-[348px] font-Mohave font-bold uppercase tracking-tighter text-5xl flex items-center pl-5"
+                    className="hover:bg-valorant-red h-[60px] w-[348px] font-tungsten font-bold uppercase tracking-normal text-5xl flex items-center pl-5"
                     key={agent.uuid}
                     onClick={() => handleAgentSelect(agent.uuid)}
                   >
