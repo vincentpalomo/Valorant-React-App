@@ -32,12 +32,12 @@ const Weapons = () => {
         {'       '}
         weapon
       </div>
-      <div className="grid sm:grid-cols-2 gap-5 ml-5">
+      <div className="grid sm:grid-cols-2 2xl:gap-x-32 ml-5">
         {weapons.data?.map((weapon) => {
           return (
-            <div className="w-96" key={weapon.uuid}>
+            <div className="sm:w-[500px]" key={weapon.uuid}>
               <div className="font-tungsten font-bold tracking-snug text-[64px] uppercase">{weapon.displayName}.</div>
-              <img className="scale-75" src={weapon.displayIcon} alt={weapon.displayName} />
+              <img className="scale-75 sm:scale-[.9] 2xl:scale-100" src={weapon.displayIcon} alt={weapon.displayName} />
             </div>
           );
         })}
