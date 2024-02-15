@@ -23,16 +23,16 @@ const Weapons = () => {
   console.log(weapons.data);
 
   return (
-    <div className="h-full bg-valorant-white flex flex-col justify-center items-center">
-      <div className="font-Mohave font-bold uppercase tracking-tighter text-8xl relative whitespace-pre-wrap mt-36">
+    <div className="h-full bg-valorant-white flex flex-col justify-center items-center text-valorant-black overflow-hidden">
+      <div className="font-Mohave font-bold uppercase tracking-tighter text-8xl  relative whitespace-pre-wrap mt-36 ml-2">
         choose{' '}
-        <span className="font-Playfair italic lowercase text-[64px] text-valorant-red absolute border-red-400">
+        <span className="font-Playfair italic lowercase text-[64px] text-valorant-red absolute -top-1 -mx-2 sm:top-0 sm:-mx-0">
           your
         </span>
         {'       '}
         weapon
       </div>
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-5 ml-5">
         {weapons.data?.map((weapon) => {
           return (
             <div className="w-96" key={weapon.uuid}>
