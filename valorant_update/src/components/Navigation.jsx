@@ -81,6 +81,9 @@ const Navigation = () => {
       <div className="h-[100px] w-screen bg-off-black hidden sm:block">
         <div className="text-off-white flex justify-between items-center h-full mx-10 2xl:mx-14">
           <ul className="flex justify-between w-1/5 2xl:w-1/6 text-base font-sans font-bold uppercase tracking-wide">
+            {/* <li>
+              <a href="/">home</a>
+            </li> */}
             <li>
               <a href="/agents">agents</a>
             </li>
@@ -109,7 +112,7 @@ const Navigation = () => {
 
           <div className="w-1/5 2xl:w-1/4 flex justify-end">
             <button className="h-[60px] w-[120px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
-              play free
+              <a href="/">play free</a>
             </button>
           </div>
         </div>
