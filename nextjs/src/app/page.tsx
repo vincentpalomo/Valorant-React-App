@@ -2,8 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { fetchAgents } from './api/api';
+
+interface AgentObject {
+  data: object;
+}
+
 export default function Home() {
-  const [agents, setAgents] = useState<any[]>([]);
+  const [agents, setAgents] = useState<AgentObject>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
@@ -26,7 +31,7 @@ export default function Home() {
     }
   };
 
-  console.log('Agents:', agents); // Log agents state
+  console.log('Agents:', agents.data); // Log agents state
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -41,8 +46,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>
-        {agents.length > 0 ? (
-          agents.map((agent: any) => {
+        {agents.data.length > 0 ? (
+          agents.data.map((agent: any) => {
             console.log('Agent:', agent); // Log each agent
             return <div key={agent.uuid}>{agent.displayName}</div>;
           })
