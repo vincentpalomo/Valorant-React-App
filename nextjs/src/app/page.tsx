@@ -46,7 +46,7 @@ export default function Home() {
             .map((agent: AgentData) => {
               return (
                 <div key={agent.uuid}>
-                  <h1>{agent.displayName}</h1>
+                  <h1 className="font-sans text-3xl">{agent.displayName}</h1>
                   <img src={agent.displayIcon} alt={agent.displayName} />
                 </div>
               );
