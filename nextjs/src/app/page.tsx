@@ -3,14 +3,25 @@
 import { useState, useEffect } from 'react';
 import { fetchAgents } from './api/api';
 
+interface AgentData {
+  filter: any;
+  map(arg0: (agent: AgentData) => import('react').JSX.Element): import('react').ReactNode;
+  uuid: string;
+  displayName: string;
+  background: string;
+  displayIcon: string;
+  bustPortrait: string;
+  fullPortrait: string;
+  isPlayableCharacter: Boolean;
+}
+
 interface AgentObject {
-  data: object;
+  data: AgentData;
+  status: number;
 }
 
 export default function Home() {
-  const [agents, setAgents] = useState<AgentObject>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [agents, setAgents] = useState<AgentObject | null>(null);
 
   useEffect(() => {
     getAgents();
@@ -19,41 +30,27 @@ export default function Home() {
   const getAgents = async () => {
     try {
       const agentResponse: any = await fetchAgents();
-      if (agentResponse.status === 200) {
-        setAgents(agentResponse.data);
-        setLoading(false);
-      } else {
-        setError(`HTTP Error: ${agentResponse.status}`);
-      }
+
+      if (agentResponse.status === 200) setAgents(agentResponse.data);
     } catch (error) {
       console.error('Error fetching agents:', error);
-      setError('Error fetching agents');
     }
   };
 
-  console.log('Agents:', agents.data); // Log agents state
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  console.log('Rendering'); // Log when component renders
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        {agents.data.length > 0 ? (
-          agents.data.map((agent: any) => {
-            console.log('Agent:', agent); // Log each agent
-            return <div key={agent.uuid}>{agent.displayName}</div>;
-          })
-        ) : (
-          <div>No agents found.</div>
-        )}
+      <div className="grid grid-cols-5 gap-5">
+        {agents &&
+          agents.data
+            .filter((agent: AgentData) => agent.isPlayableCharacter)
+            .map((agent: AgentData) => {
+              return (
+                <div key={agent.uuid}>
+                  <h1>{agent.displayName}</h1>
+                  <img src={agent.displayIcon} alt={agent.displayName} />
+                </div>
+              );
+            })}
       </div>
     </main>
   );
