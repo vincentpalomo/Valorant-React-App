@@ -270,7 +270,7 @@ const Main = () => {
 
       {/* about */}
       <div className='hidden flex-col justify-center items-start h-screen sm:flex bg-valorant-white text-valorant-black'>
-        <div className='ml-24 2xl:ml-32 mt-10'>
+        <div className='ml-24 2xl:ml-32'>
           <div className='font-Playfair italic font-bold text-[64px]'>we are</div>
           <div className='font-Mohave font-bold text-[300px] uppercase tracking-tighter leading-[16rem]'>valorant</div>
         </div>
@@ -291,7 +291,7 @@ const Main = () => {
 
           {/* video */}
           <div className='flex items-center justify-center w-full'>
-            <div className='opacity-90 w-[640px] h-[360px] 2xl:w-[800px] 2xl:h-[450px] overflow-hidden flex items-center justify-center rounded-lg'>
+            <div className='opacity-90 w-[600px] h-[320px] 2xl:w-[800px] 2xl:h-[450px] overflow-hidden flex items-center justify-center rounded-lg'>
               <video className='scale-125' src={ep08} autoPlay loop muted />
             </div>
           </div>
