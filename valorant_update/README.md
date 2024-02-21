@@ -7,6 +7,7 @@ https://valorant-react-vp.netlify.app
 > - some issues have be resolved but pages like agent select and agent info are broken
 > - look into updating those pages soon
 > - have not found any additional issues
+> - some rendering issues on load
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
