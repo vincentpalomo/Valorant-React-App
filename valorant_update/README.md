@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+### Live website
+https://valorant-react-vp.netlify.app
+
 > - issues with site on macbook screen
 > - some issues have be resolved but pages like agent select and agent info are broken
 > - look into updating those pages soon
