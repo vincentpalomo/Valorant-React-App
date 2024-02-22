@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Agent = (uuid: string) => {
-  console.log(uuid);
+const Agent = ({ agentId }) => {
+  console.log(agentId);
 
   return (
     <>
-      <div>hello from agent</div>
+      <div>selected agent {agentId}</div>
     </>
   );
 };

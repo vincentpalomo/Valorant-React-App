@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { fetchAgents } from './api/api';
+import Agent from './components/Agent';
 
 interface AgentData {
   filter: any;
@@ -22,6 +23,7 @@ interface AgentObject {
 
 export default function Home() {
   const [agents, setAgents] = useState<AgentObject | null>(null);
+  const [selectedAgent, setSelectedAgent] = useState<AgentData | null>(null);
 
   useEffect(() => {
     getAgents();
@@ -37,9 +39,12 @@ export default function Home() {
     }
   };
 
-  const handleAgent = (uuid: string) => {
+  const handleAgent = (uuid: any) => {
     console.log('Agent ID:', uuid);
+    setSelectedAgent(uuid);
   };
+
+  console.log(selectedAgent);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -50,7 +55,7 @@ export default function Home() {
             .map((agent: AgentData) => {
               return (
                 <div key={agent.uuid}>
-                  <h1 onClick={() => handleAgent(agent.uuid)} className="font-sans text-3xl">
+                  <h1 onClick={() => handleAgent(agent.uuid)} className="font-sans text-3xl cursor-pointer">
                     {agent.displayName}
                   </h1>
                   <img src={agent.displayIcon} alt={agent.displayName} />
@@ -58,6 +63,7 @@ export default function Home() {
               );
             })}
       </div>
+      <div>{selectedAgent && <Agent agentId={selectedAgent} />}</div>
     </main>
   );
 }
