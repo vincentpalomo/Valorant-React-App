@@ -21,3 +21,20 @@ export const fetchAgents = async () => {
     console.error(`Error retrieving agents`, error);
   }
 };
+
+// fetch agent info
+export const fetchAgent = async (uuid) => {
+  try {
+    const res = await fetch(`${APIURL}/agents/${uuid}`);
+
+    if (!res.ok) throw new Error(`Http error, Status: ${res.status}`);
+
+    const json = await res.json();
+
+    if (!json) throw new Error(`Error parsing JSON data`);
+
+    return { data: json, status: res.status };
+  } catch (error) {
+    console.error(`Error retrieving agents`, error);
+  }
+};
