@@ -37,6 +37,10 @@ export default function Home() {
     }
   };
 
+  const handleAgent = (uuid: string) => {
+    console.log('Agent ID:', uuid);
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="grid grid-cols-5 gap-5">
@@ -46,7 +50,9 @@ export default function Home() {
             .map((agent: AgentData) => {
               return (
                 <div key={agent.uuid}>
-                  <h1 className="font-sans text-3xl">{agent.displayName}</h1>
+                  <h1 onClick={() => handleAgent(agent.uuid)} className="font-sans text-3xl">
+                    {agent.displayName}
+                  </h1>
                   <img src={agent.displayIcon} alt={agent.displayName} />
                 </div>
               );
