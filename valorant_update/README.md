@@ -7,7 +7,6 @@ https://valorant-react-vp.netlify.app
 > - some issues have be resolved but pages like agent select and agent info are broken
 > - look into updating those pages soon
 
-
 ## Available Scripts
 
 In the project directory, you can run:
