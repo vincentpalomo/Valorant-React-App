@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Agent = ({ agentId }) => {
-  console.log(agentId);
+const Agent = ({}) => {
+  console.log();
 
   return (
     <>
-      <div>selected agent {agentId}</div>
+      <div>selected agent {}</div>
     </>
   );
 };
