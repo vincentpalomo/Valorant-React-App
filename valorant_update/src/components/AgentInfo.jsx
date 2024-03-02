@@ -64,7 +64,10 @@ const AgentInfo = ({ agentId, onClose }) => {
       {/* desktop view */}
       <div className="hidden h-screen w-screen bg-valorant-black sm:flex flex-col justify-center items-start px-20 gap-5 relative overflow-hidden">
         <div className="flex flex-col items-start gap-1">
-          <button onClick={handleGoBack} className="text-valorant-red uppercase font-sans font-bold z-10">
+          <button
+            onClick={handleGoBack}
+            className="text-valorant-red uppercase font-sans font-bold z-10 hover:text-valorant-white"
+          >
             back
           </button>
           <div className="font-tungsten font-bold uppercase tracking-normal leading-[6rem] text-valorant-white text-[160px] -ml-2 mt-20">

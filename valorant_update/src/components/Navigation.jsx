@@ -85,13 +85,19 @@ const Navigation = () => {
               <a href="/">home</a>
             </li> */}
             <li>
-              <a href="/agents">agents</a>
+              <a className="hover:text-valorant-red" href="/agents">
+                agents
+              </a>
             </li>
             <li>
-              <a href="/weapons">weapons</a>
+              <a className="hover:text-valorant-red" href="/weapons">
+                weapons
+              </a>
             </li>
             <li>
-              <a href="/maps">maps</a>
+              <a className="hover:text-valorant-red" href="/maps">
+                maps
+              </a>
             </li>
           </ul>
 
@@ -111,7 +117,7 @@ const Navigation = () => {
           </button>
 
           <div className="w-1/5 2xl:w-1/4 flex justify-end">
-            <button className="h-[60px] w-[120px] bg-valorant-red rounded text-valorant-white font-bold uppercase">
+            <button className="h-[60px] w-[120px] bg-valorant-red rounded text-valorant-white font-bold uppercase hover:bg-valorant-white hover:text-valorant-black">
               <a href="/">play free</a>
             </button>
           </div>
