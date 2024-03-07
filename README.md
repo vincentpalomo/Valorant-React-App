@@ -1,6 +1,6 @@
 # Valorant-React-App
 
-Simple React App using Valorant API (not official)
+Modern React App using Valorant API (not official)
 
 Valorant API: https://dash.valorant-api.com/
 
