@@ -1,11 +1,15 @@
 import React from 'react';
 
-const Agent = ({}) => {
-  console.log();
+interface AgentProps {
+  agentId: string;
+}
+
+const Agent: React.FC<AgentProps> = ({ agentId }) => {
+  console.log('inside agent', agentId);
 
   return (
     <>
-      <div>selected agent {}</div>
+      <div>selected agent {agentId}</div>
     </>
   );
 };

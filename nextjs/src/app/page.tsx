@@ -7,6 +7,7 @@ import Agent from './components/Agent';
 interface AgentData {
   filter: any;
   map(arg0: (agent: AgentData) => import('react').JSX.Element): import('react').ReactNode;
+  find: any;
   uuid: string;
   displayName: string;
   background: string;
@@ -39,23 +40,27 @@ export default function Home() {
     }
   };
 
-  const handleAgent = (uuid: any) => {
+  const handleAgent = (uuid: string) => {
     console.log('Agent ID:', uuid);
-    setSelectedAgent(uuid);
+    const agent = agents?.data.find((agent: any) => agent.uuid === uuid);
+
+    if (agent) {
+      setSelectedAgent(agent);
+    } else {
+      console.log(`Agent with ID ${uuid} not found.`);
+    }
   };
 
-  console.log(selectedAgent);
-
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="grid grid-cols-5 gap-5">
+    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+      <div className='grid grid-cols-5 gap-5'>
         {agents &&
           agents.data
             .filter((agent: AgentData) => agent.isPlayableCharacter)
             .map((agent: AgentData) => {
               return (
                 <div key={agent.uuid}>
-                  <h1 onClick={() => handleAgent(agent.uuid)} className="font-sans text-3xl cursor-pointer">
+                  <h1 onClick={() => handleAgent(agent.uuid)} className='font-sans text-3xl cursor-pointer'>
                     {agent.displayName}
                   </h1>
                   <img src={agent.displayIcon} alt={agent.displayName} />
@@ -63,7 +68,7 @@ export default function Home() {
               );
             })}
       </div>
-      <div>{selectedAgent && <Agent agentId={selectedAgent} />}</div>
+      <div>{selectedAgent && <Agent agentId={selectedAgent.uuid} />}</div>
     </main>
   );
 }
