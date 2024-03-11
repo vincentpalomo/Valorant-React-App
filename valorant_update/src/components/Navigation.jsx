@@ -117,7 +117,7 @@ const Navigation = () => {
           </button>
 
           <div className="w-1/5 2xl:w-1/4 flex justify-end">
-            <button className="h-[60px] w-[120px] bg-valorant-red rounded text-valorant-white font-bold uppercase hover:bg-valorant-white hover:text-valorant-black">
+            <button className="h-[60px] w-[120px] bg-valorant-red rounded text-valorant-white font-bold uppercase hover:bg-valorant-white hover:text-valorant-blackcd">
               <a href="/">play free</a>
             </button>
           </div>
